@@ -142,4 +142,4 @@ def pad_img(img, target_size, default_pad=0):
 
 
 def resize(img, size, version='cv'):
-    return cv2.resize(img, size)
+    return cv2.resize(img, (size, size))

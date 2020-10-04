@@ -25,5 +25,5 @@ ENV PYTHONPATH="/app/avatarify:/app/avatarify/fomm"
 EXPOSE 5557
 EXPOSE 5558
 
-CMD git pull
+CMD cd /app/avatarify && git pull
 CMD ["python3", "afy/cam_fomm.py", "--config", "fomm/config/vox-adv-256.yaml", "--checkpoint", "vox-adv-cpk.pth.tar", "--virt-cam", "9", "--relative", "--adapt_scale", "--is-worker"]
