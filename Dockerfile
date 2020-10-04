@@ -6,10 +6,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -qq update \
 
 ARG PYTORCH_WHEEL="https://download.pytorch.org/whl/cu100/torch-1.0.0-cp36-cp36m-linux_x86_64.whl"
 ARG FACE_ALIGNMENT_GIT="git+https://github.com/1adrianb/face-alignment"
-ARG AVATARIFY_COMMIT="182bf4a10aba279cb837d6c8e6c281191114fd77"
+# ARG AVATARIFY_COMMIT="182bf4a10aba279cb837d6c8e6c281191114fd77"
 ARG FOMM_COMMIT="efbe0a6f17b38360ff9a446fddfbb3ce5493534c"
 
-RUN git clone https://github.com/SkywalkerAtlas/avatarify.git /app/avatarify && cd /app/avatarify && git checkout ${AVATARIFY_COMMIT} \
+RUN git clone https://github.com/SkywalkerAtlas/avatarify.git /app/avatarify && cd /app/avatarify \
  && git clone https://github.com/SkywalkerAtlas/first-order-model.git /app/avatarify/fomm && cd /app/avatarify/fomm && git checkout ${FOMM_COMMIT}
 
 WORKDIR /app/avatarify
