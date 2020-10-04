@@ -1,5 +1,6 @@
 vox-adv-cpk.pth.tar
 v4l2loopback
 __pycache__
-
+s3fd-619a316812.pth
+2DFAN4-11f355bf06.pth.tar
 *.log
