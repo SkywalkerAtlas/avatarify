@@ -56,6 +56,7 @@ def is_new_frame_better(source, driving, predictor):
 def load_stylegan_avatar():
     img_id = np.random.randint(0, 50000)
     print('select waifu {}'.format(img_id))
+    print('fffffffffffffffffffffffffffffffffffffffffff')
     url = "http://thiswaifudoesnotexist.net/v2/example-{}.jpg".format(img_id)
     r = requests.get(url, headers={'User-Agent': "My User Agent 1.0"}).content
 
