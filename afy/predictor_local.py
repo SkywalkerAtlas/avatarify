@@ -105,7 +105,8 @@ class PredictorLocal:
         area = ConvexHull(kp[:, :2]).volume
         area = np.sqrt(area)
         kp[:, :2] = kp[:, :2] / area
-        return kp
+        return np.zeros_like(kp)
+        # return kp
     
     def get_start_frame(self):
         return self.start_frame
