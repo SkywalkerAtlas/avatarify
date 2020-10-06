@@ -56,7 +56,7 @@ class PredictorLocal:
     def set_source_image(self, source_image):
         self.source = to_tensor(source_image).to(self.device)
         self.kp_source = self.kp_detector(self.source)
-        print(self.kp_source.shape)
+        print(self.kp_source)
 
         if self.enc_downscale > 1:
             h, w = int(self.source.shape[2] / self.enc_downscale), int(self.source.shape[3] / self.enc_downscale)
