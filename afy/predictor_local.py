@@ -91,7 +91,7 @@ class PredictorLocal:
 
     def get_frame_kp(self, image):
         kp_landmarks = self.fa.get_landmarks(image)
-        print(kp_landmarks)
+        # print(kp_landmarks)
         if kp_landmarks:
             kp_image = kp_landmarks[0]
             kp_image = self.normalize_alignment_kp(kp_image)
@@ -105,8 +105,8 @@ class PredictorLocal:
         area = ConvexHull(kp[:, :2]).volume
         area = np.sqrt(area)
         kp[:, :2] = kp[:, :2] / area
-        return np.zeros_like(kp)
-        # return kp
+        # return np.zeros_like(kp)
+        return kp
     
     def get_start_frame(self):
         return self.start_frame
